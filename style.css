@@ -1,0 +1,93 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.user-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.user-input, .selection-type {
+    margin: 10px;
+}
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#calendar-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.month {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+.month-header {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.day, .day-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border-radius: 4px;
+}
+.day-name {
+    font-weight: bold;
+}
+.day {
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+.day.other-month {
+    color: #ccc;
+    cursor: not-allowed;
+}
+.day:not(.other-month):hover {
+    background-color: #e0e0e0;
+}
+.day.unavailable {
+    background-color: #ff8a80; /* Rood */
+    color: white;
+}
+.day.available {
+    background-color: #b9f6ca; /* Groen */
+    color: #333;
+}
+#calculate-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+#results {
+    margin-top: 20px;
+}

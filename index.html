@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afspraakplanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Afspraakplanner</h1>
+        <p>Vul je naam in, selecteer of je vakantie of beschikbare dagen wilt markeren, en klik op de data in de kalender.</p>
+
+        <div class="user-controls">
+            <div class="user-input">
+                <label for="name">Jouw naam:</label>
+                <input type="text" id="name" placeholder="Bv. Jan">
+            </div>
+            <div class="selection-type">
+                <label>Ik wil markeren:</label>
+                <input type="radio" id="type-unavailable" name="selection-type" value="unavailable" checked>
+                <label for="type-unavailable">Vakantie (niet beschikbaar)</label>
+                <input type="radio" id="type-available" name="selection-type" value="available">
+                <label for="type-available">Beschikbaar</label>
+            </div>
+        </div>
+
+        <div id="calendar-container">
+            </div>
+
+        <button id="calculate-button">Vind de beste data!</button>
+
+        <div id="results">
+            <h2>Beste Afspreekmomenten:</h2>
+            <ul id="results-list">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
